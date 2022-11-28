@@ -1,0 +1,7 @@
+n,m=map(int,input().split())
+l=list(map(int,input().split()))
+k=list(map(int,input().split()))
+a=set(l)
+b=set(k)
+u=a.intersection(b)
+print(len(u))
