@@ -13,11 +13,10 @@ k=0
 for i in range(2,n+1):
     if(ans(i)==0):
         if(n%i==0 and ans(n//i)==0):
+            k+=1
             c=i
             d=n//i
-            k+=1
 if(k==0):
     print("-1")
 else:
     print(d,c)
-            
