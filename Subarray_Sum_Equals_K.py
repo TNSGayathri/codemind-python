@@ -1,10 +1,16 @@
+def sub_array(l,a):
+    s=[]
+    m=[]
+    for i in range(0,a+1):
+        for j in range(i+1,len(l)+1):
+            s=l[i:j]
+            m.append(s)
+    return m
+c=0    
 a,b=map(int,input().split())
 l=list(map(int,input().split()))
-c=0
-for i in l:
-    if i==b:
-        c+=1
-for i in range(0,a-1):
-    if(l[i]+l[i+1]==b):
+m=sub_array(l,a)
+for i in m:
+    if sum(i)==b:
         c+=1
 print(c)
