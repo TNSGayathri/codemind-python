@@ -1,0 +1,6 @@
+n=input().lower()
+m=input().lower()
+l=set(n.split(" "))
+k=set(m.split(" "))
+c=list(l.intersection(k))
+print(len(c))
