@@ -1,0 +1,10 @@
+n=input().lower().split()
+m=input().lower().split()
+l1="".join(n)
+l2="".join(m)
+l=list(set(l1).intersection(set(l2)))
+if(l==[]):
+    print("-1")
+else:
+    l3=sorted(l)
+    print("".join(l3))
