@@ -9,3 +9,4 @@ for i in n[0]:
         f=1
 if f==0:
     print(-1)
+    
