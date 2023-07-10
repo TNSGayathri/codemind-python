@@ -2,16 +2,19 @@ n=int(input())
 for i in range(n):
     a,b=map(int,input().split())
     l=list(map(int,input().split()))
-    c=0
-    for i in range(len(l)):
-        for j in range(i,len(l)):
-            s=0
-            for k in range(i,j+1):
-                s+=l[k]
-            if(s==b and c==0):
-                print(i+1,j+1)
-                c+=1
-                
-    if(c==0):
-        print("-1")
-    
+    pre=[]
+    x=0
+    d={}
+    for j in l:
+        x+=j
+        pre.append(x)
+    for k in range(len(pre)):
+        if pre[k]==b:
+            print(1,k+1)
+            break
+        elif pre[k]-b in d:
+            print(d[pre[k]-b]+2,k+1)
+            break
+        d[pre[i]]=i
+    else:
+        print(-1)
